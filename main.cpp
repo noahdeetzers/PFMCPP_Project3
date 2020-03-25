@@ -10,6 +10,7 @@ Video:  Chapter 2 Part 5
  1) write 10 user-defined types in plain-English, 
     in the comments above your UDT, write out, in plain-english, 3 things it can do, and 5 traits.
     Note: Your 10th UDT will use 5 of your UDTs for its properties, so maybe start on UDT #10 first. This goes along with instruction #6.
+
 ************************
     Commit after you complete this step so i can review before you proceed with the rest of the projects
     Ping me in Slack to review this step.
@@ -107,146 +108,165 @@ struct CarWash //2)
 
 
 /*
-1)
+1) grocery store
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) has produce section
+    2) has meat section
+    3) has dairy section
+    4) states amount of revinue made in a week
+    5) shows pounds of cheese purchased per day
 3 things it can do:
-    1)
-    2)
-    3)
+    1) help people pick out what they need
+    2) make sure food is fresh
+    3) store food for people in advance
+ */
+struct groceryStore
+{
+    //has produce section
+    bool hasProduce = true;
+    //has meat section
+    bool hasMeatSection = true;
+    //has dairy section
+    bool hasDairySection = true;
+    //amount of revinue made in a week
+    float revinuePerWeek = 32300.00f;
+    //shows pounds of cheese purchased per day
+    int cheesePerDay = 35;
+
+    struct beans
+    {
+        bool blackBeans = false;
+        bool pentoBeans = true;
+    };
+
+};
+/*
+2) gas station
+5 properties:
+    1) it has candy bars
+    2) it stores the amount of gas pumped annually
+    3) has oil
+    4) stores the amount of snacks purchased daily
+    5) counts the number of cars parked at the gas pumps
+3 things it can do:
+    1) fill up cars 
+    2) perform oil changes
+    3) take money in exchange for supplying candy bars
  */
 
 /*
-2)
+3) gymnasium
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) has weights
+    2) has bench press
+    3) is able to count amount of memberships scanned
+    4) has healthy snacks
+    5) shows amount of hours worked by employees in a week
 3 things it can do:
-    1)
-    2)
-    3)
+    1) work people out
+    2) charge for a membership
+    3) hold zumba dance classes
  */
 
 /*
-3)
+4) casino
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) it has poker
+    2) it has roulette
+    3) it has a stage
+    4) states how many customers it has per day
+    5) states odds that slot machines are set to
 3 things it can do:
-    1)
-    2)
-    3)
+    1) pay customers
+    2) serve alcohol
+    3) host live events
  */
 
 /*
-4)
+5) church
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) has a main chapel
+    2) counts how many attendees every sunday
+    3) has an early service
+    4) has a community fund 
+    5) can state the balance of the community fund
 3 things it can do:
-    1)
-    2)
-    3)
+    1) hold services
+    2) charge people for membership
+    3) pay prist
  */
 
 /*
-5)
+6) park
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) can count total number of attendees
+    2) has a swing set
+    3) has a slide
+    4) stores number of park users per week
+    5) has soccer field
 3 things it can do:
-    1)
-    2)
-    3)
+    1) host community functions
+    2) have a summer camp for kids
+    3) charge people for daycare
  */
 
 /*
-6)
+7) marina
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) has docks 
+    2) has a boathouse
+    3) can count total number of boats stored
+    4) can count revinue made per day
+    5) has fishing outfitter
 3 things it can do:
-    1)
-    2)
-    3)
+    1) store boats
+    2) charge boaters for storage
+    3) clean boats for a fee
  */
 
 /*
-7)
+8) rose garden
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) has roses
+    2) has lilacs
+    3) monitors times the flowers were watered daily
+    4) has student center
+    5) monitors number of students visiting per week
 3 things it can do:
-    1)
-    2)
-    3)
+    1) count total number of flowers that died
+    2) fine people for picking them
+    3) lead flower-watching classes
  */
 
 /*
-8)
+9) apple store
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) has ipads
+    2) has iphones
+    3) count total number of iphones sold
+    4) count total number of ipads sold
+    5) has help desk service
 3 things it can do:
-    1)
-    2)
-    3)
+    1) charge people for phones
+    2) charge people for ipads
+    3) charge people for help desk
  */
 
 /*
-9)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
- */
-
-/*
-10)
+10) city
 5 properties:
  These 5 properties should be UDTs that you defined above.
  this goes along with the instruction:
     One of your 10 UDTs should only use UDTs for its member variable types.
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) has a grocery store
+    2) has a gas station
+    3) has a gymasium
+    4) has a casino
+    5) has a church
 3 things it can do:
-    1)
-    2)
-    3)
+    1) host community meetings
+    2) build roads
+    3) hold elections for city government
  */
 
 #include <iostream>
