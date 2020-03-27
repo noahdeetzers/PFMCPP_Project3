@@ -113,14 +113,15 @@ struct CarWash //2)
     1) has produce section
     2) has meat section
     3) has dairy section
-    4) states amount of revinue made in a week
+    4) states amount of revenue made in a week
     5) shows pounds of cheese purchased per day
 3 things it can do:
     1) help people pick out what they need
     2) make sure food is fresh
     3) store food for people in advance
  */
-struct groceryStore
+
+struct GroceryStore 
 {
     //has produce section
     bool hasProduce = true;
@@ -129,11 +130,11 @@ struct groceryStore
     //has dairy section
     bool hasDairySection = true;
     //amount of revinue made in a week
-    float revinuePerWeek = 32300.00f;
+    float revenuePerWeek = 32300.00f;
     //shows pounds of cheese purchased per day
-    int cheesePerDay = 35;
+    int purchasedCheesePerDay = 35;
 
-    struct beans
+    struct Beans
     {
         bool blackBeans = false;
         bool pentoBeans = true;
@@ -188,8 +189,8 @@ struct groceryStore
     1) has a main chapel
     2) counts how many attendees every sunday
     3) has an early service
-    4) has a community fund 
-    5) can state the balance of the community fund
+    4) community fund balance
+    5) list of projects done by community fund
 3 things it can do:
     1) hold services
     2) charge people for membership
@@ -200,9 +201,9 @@ struct groceryStore
 6) park
 5 properties:
     1) can count total number of attendees
-    2) has a swing set
-    3) has a slide
-    4) stores number of park users per week
+    2) square footage of park
+    3) number of animals
+    4) number of park users per week
     5) has soccer field
 3 things it can do:
     1) host community functions
@@ -213,10 +214,10 @@ struct groceryStore
 /*
 7) marina
 5 properties:
-    1) has docks 
+    1) number of docks docks 
     2) has a boathouse
-    3) can count total number of boats stored
-    4) can count revinue made per day
+    3) number of boats stored
+    4) daily revinue earned
     5) has fishing outfitter
 3 things it can do:
     1) store boats
@@ -237,18 +238,18 @@ struct groceryStore
     2) fine people for picking them
     3) lead flower-watching classes
  */
-
+ 
 /*
 9) apple store
 5 properties:
     1) has ipads
     2) has iphones
-    3) count total number of iphones sold
-    4) count total number of ipads sold
+    3) number of customers served daily
+    4) number of employees
     5) has help desk service
 3 things it can do:
-    1) charge people for phones
-    2) charge people for ipads
+    1) hire new employees
+    2) recycle equipment
     3) charge people for help desk
  */
 
