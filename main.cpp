@@ -388,7 +388,7 @@ struct Marina
 /*
 8) rose garden
 5 properties:
-    1) has roses
+    1) number of roses
     2) has lilacs
     3) monitors times the flowers were watered daily
     4) number of students in student center
@@ -401,8 +401,8 @@ struct Marina
 
 struct RoseGarden
 {
-    //has roses
-    bool hasRoses = true;
+    //number of roses
+    int roses = 457;
     //has lilacs
     bool hasLilacs = false;
     //monitors times flowers are watered daily
