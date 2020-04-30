@@ -57,7 +57,7 @@ void Person::run(int howFast, bool startWithLeftFoot)
         rightFoot.stepForward();
         leftFoot.stepForward();
     }
-    distanceTraveled += leftFoot.stepSize() + rightFoot.stepSize();
+    distanceTraveled += leftFoot.stepSize() + rightFoot.stepSize();howFast = 1;
 }
 
 
@@ -120,9 +120,12 @@ bool GroceryStore::foodIsFresh()
 }
 int GroceryStore::storeFood( int amount )
 {
+    
+    amount = 4;
     if(  amount > 0 )
     {
         bool customerBoughtSomething = true;
+        customerBoughtSomething = true;
     }
     return 0;
 }
@@ -165,7 +168,7 @@ void GasStation::performOilChanges()
 double GasStation::chargeCustomer(bool thereIsCustomer)
 {
     if (thereIsCustomer == true) {}
-
+    return 0;
 }
 //===============================================================
 struct Gymnasium
@@ -184,7 +187,7 @@ struct Gymnasium
     };
     bool workPeopleOut( Workout Workout );
     int membershipCharge();
-    int zumbaDanceClassCount();
+    int zumbaDanceClassCount( Workout Workout );
 };
 
 bool Gymnasium::workPeopleOut( Workout Workout)
@@ -194,17 +197,21 @@ bool Gymnasium::workPeopleOut( Workout Workout)
         Workout.pullupCount = 0;
         Workout.benchPressMax = 0;
     }
+    return 0;
 }
 int Gymnasium::membershipCharge()
 {
     if( membershipsScanned != 34) 
     {
         bool zumbaClassIsCancelled = true;
+        zumbaClassIsCancelled = true;
     }
+    return 0;
 }
-int Gymnasium::zumbaDanceClassCount()
+int Gymnasium::zumbaDanceClassCount( Workout Workout )
 {
-
+    Workout.isWorkoutHappening = true;
+    return 0;
 }
 //=====================================================
 
@@ -221,16 +228,18 @@ struct Casino
     int dailyCustomerCount = 312;
     float slotMachineChanceOfWinning = 0.0024f;
     Entertainment shows;
+    bool didCustomersWin;
 
 
     int customerPayout(int gamesWon );
     int bottlesServed();
     bool hostsLiveEvents(int numberOfEvents );
 };
-int Casino::customerPayout(int gamesWon)
+int Casino::customerPayout( int gamesWon )
 {
-    if( customerPayout( gamesWon <= 0))
+    if( gamesWon != 0)
     {
+        didCustomersWin = true;
     }
     return 0;
 }
@@ -278,15 +287,17 @@ struct Church
 
 bool Church::holdServices(bool sundayServiceIsHappening)
 {
-    if( bool sundayServiceIsHappening = true){    
-    }
+    sundayServiceIsHappening = true;
+    return 0;
 }
 int Church::priceOfMembership()
 {
     if( int priceOfMembership = 1000)
     {
-       float pristSalary(10.344f);
+    pristSalary();
+
     }
+    return 0;
 }
 float Church::pristSalary()
 {
@@ -301,6 +312,7 @@ struct Park
     int numberOfAnimals = 18353;
     double donationsPerWeek = 2000.3;
     bool hasSoccerField = true;
+    bool childAtDaycare;
 
     bool communityFunction();
     void reparePark();
@@ -310,12 +322,13 @@ bool Park::communityFunction()
 {
     if( bool communityFunction = true)
     {
-        int numberOfAttendees = 5000;
+        numberOfAttendees = 5000;
     }
     else
     {
-        int numberOfAttendees = 250;
+        numberOfAttendees = 250;
     }
+    return 0;
 }
 void Park::reparePark()
 {
@@ -328,7 +341,7 @@ int Park::priceForDaycare()
 {
     if( int priceForDaycare =! 0)
     {
-        bool childAtDaycare = true;
+        childAtDaycare = true;
     }
     return 0;
 }
@@ -338,7 +351,7 @@ struct Marina
 
     int numberOfDocks = 54;
     bool hasBoathouse = true;
-    int numberOfBoatsStored = 56;
+    int numberOfBoatsStored;
     float dailyRevinueEarned = 432.32f;
     bool hasFishingOutfitter = true;
 
@@ -352,15 +365,16 @@ struct Marina
 
     bool storeBoats();
     unsigned int priceOfStorage();
-    void priceToCleanYacht( Yacht yacht );
+    void priceToCleanYacht( Yacht );
     Yacht yachtIsInMarina;
 };
 bool Marina::storeBoats()
 {
     if( bool storeBoats =! true)
     {
-        int numberOfBoatsStored = 0;
+        numberOfBoatsStored = 0;
     }
+    return 0;
 }
 unsigned int Marina::priceOfStorage()
 {
@@ -368,8 +382,9 @@ unsigned int Marina::priceOfStorage()
     {
         return 0;
     }
+    return 0;
 }
-void Marina::priceToCleanYacht(Marina::Yacht yacht)
+void Marina::priceToCleanYacht(Marina::Yacht  )
 {
     return;
 }
@@ -378,10 +393,10 @@ struct RoseGarden
 {
 
     int roses = 457;
-    bool hasLilacs = false;
     int timesFlowersAreWatered = 6;
     int numberOfStudentsInCenter = 53;
     int weeklyStudentVisitors = 145;
+    int flowerDeathCount;
 
 
     int totalFlowersDead();
@@ -392,8 +407,9 @@ int RoseGarden::totalFlowersDead()
 {
     if (bool hasLilacs = false)
     {
-        int totalFlowersDead = 26;
+        flowerDeathCount = 26;
     }
+    return 0;
 }
 int RoseGarden::fineAmount()
 {
@@ -420,11 +436,11 @@ struct AppleStore
 };
 int AppleStore::newEmployeesHired(int numberOfNewHires)
 {
-    if( int numberOfNewHires =! 0)
+    if( numberOfNewHires )
     {
         return 0;
     }
-
+    return 0;
 }
 float AppleStore::itemsRecycled()
 {
