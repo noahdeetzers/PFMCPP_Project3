@@ -139,6 +139,14 @@ struct Vehicles
     int countNumberOfBlue();
 };
 
+int Vehicles::countNumberOfRed()
+{
+    return 25;
+}
+int Vehicles::countNumberOfBlue()
+{
+    return 15;
+}
  struct GasStation
 {
     bool candyBars = true;
@@ -157,8 +165,8 @@ void GasStation::fillUpCars( bool hasCars)
 {
     if (hasCars == true)
     {
-       // cars.countNumberOfRed();        //tried to implement this but it gave me error: linker command failed with exit code 1 (use -v to see invocation)
-       // cars.countNumberOfBlue();
+       cars.countNumberOfRed();
+       cars.countNumberOfBlue();
     }
 }
 void GasStation::performOilChanges()
@@ -191,15 +199,15 @@ struct Gymnasium
     };
     bool workPeopleOut( Workout Workout );
     int membershipCharge();
-    int zumbaDanceClassCount( Workout Workout );
+    int zumbaDanceClassCount( Workout workout );
 };
 
-bool Gymnasium::workPeopleOut( Workout Workout)
+bool Gymnasium::workPeopleOut( Workout workout)
 {
-    if(Workout.isWorkoutHappening == false)
+    if(workout.isWorkoutHappening == false)
     {
-        Workout.pullupCount = 0;
-        Workout.benchPressMax = 0;
+        workout.pullupCount = 0;
+        workout.benchPressMax = 0;
     }
     return true;
 }
@@ -211,9 +219,9 @@ int Gymnasium::membershipCharge()
     }
     return true;
 }
-int Gymnasium::zumbaDanceClassCount( Workout Workout )
+int Gymnasium::zumbaDanceClassCount( Workout workout )
 {
-    Workout.isWorkoutHappening = true;
+    workout.isWorkoutHappening = true;
     return true;
 }
 //=====================================================
@@ -223,6 +231,11 @@ struct Entertainment
     int shows();
     bool showsAreCancelled();
 };
+
+bool Entertainment::showsAreCancelled()
+{
+    return true;
+}
 struct Casino
 {
     bool pokerGame = true;
@@ -254,7 +267,7 @@ bool Casino::hostsLiveEvents(int numberOfEvents )
 {
     if ((numberOfEvents = 0))
     {
-        //shows.showsAreCancelled(); same error in the previous if statemnt
+        shows.showsAreCancelled();
     }
     return true;
 }
