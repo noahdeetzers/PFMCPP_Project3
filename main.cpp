@@ -15,16 +15,14 @@ Create a branch named Part2
     you should be able to deduce the return type of those functions based on their usage in Person::run()
     You'll need to insert the Person struct from the video in the space below.
  */
+#include <iostream>
 struct Feet
 {
     void stepForward();
     int stepSize();
 };
 
-void Feet::stepForward()
-{
-    return;
-}
+void Feet::stepForward(){}
 
 int Feet::stepSize()
 {
@@ -91,10 +89,12 @@ struct GroceryStore
     bool hasMeatSection = true;
     bool hasDairySection = true;
     float revenuePerWeek = 32300.0f;
+    bool isFoodFresh;
 
     int purchasedCheesePerDay = 35;
     Hand moveTowardsItem;
     Hand moveAwayFromItem;
+    bool customerBoughtSomething;
 
     struct Beans
     {
@@ -103,7 +103,7 @@ struct GroceryStore
     };
 
     void pickOutFood( Beans Beans );
-    bool foodIsFresh();
+    bool foodIsFresh(int numberOfFreshFood);
     int storeFood(int amount);
     Beans beansBeingPicked;
 
@@ -113,10 +113,13 @@ void GroceryStore::pickOutFood( Beans beans )
 {
     if( beans.blackBeans == true ) {}
 }
-bool GroceryStore::foodIsFresh()
+bool GroceryStore::foodIsFresh( int numberOfFreshFood)
 {
-   if( bool foodIsFresh = false ) {}
-   return 0;
+    if( numberOfFreshFood == 0)
+    {
+        isFoodFresh = false;
+    }
+    return true;
 }
 int GroceryStore::storeFood( int amount )
 {
@@ -124,10 +127,9 @@ int GroceryStore::storeFood( int amount )
     amount = 4;
     if(  amount > 0 )
     {
-        bool customerBoughtSomething = true;
         customerBoughtSomething = true;
     }
-    return 0;
+    return true;
 }
 
 //=====================================
@@ -159,16 +161,17 @@ void GasStation::fillUpCars( bool hasCars)
        // cars.countNumberOfBlue();
     }
 }
-
 void GasStation::performOilChanges()
 {
-
+    if (oil == true)
+    {
+        std::cout << "Oil Change was succesfully Performed" << std::endl;
+    }
 }
-
 double GasStation::chargeCustomer(bool thereIsCustomer)
 {
     if (thereIsCustomer == true) {}
-    return 0;
+    return true;
 }
 //===============================================================
 struct Gymnasium
@@ -177,6 +180,7 @@ struct Gymnasium
     bool benchPress = true;
     int membershipsScanned = 34;
     bool hasHealthySnacks = true;
+    bool zumbaClassIsCancelled;
     double totalWeeklyHoursWorked = 84.5;
     struct Workout
     {
@@ -197,21 +201,20 @@ bool Gymnasium::workPeopleOut( Workout Workout)
         Workout.pullupCount = 0;
         Workout.benchPressMax = 0;
     }
-    return 0;
+    return true;
 }
 int Gymnasium::membershipCharge()
 {
     if( membershipsScanned != 34) 
     {
-        bool zumbaClassIsCancelled = true;
         zumbaClassIsCancelled = true;
     }
-    return 0;
+    return true;
 }
 int Gymnasium::zumbaDanceClassCount( Workout Workout )
 {
     Workout.isWorkoutHappening = true;
-    return 0;
+    return true;
 }
 //=====================================================
 
@@ -241,11 +244,11 @@ int Casino::customerPayout( int gamesWon )
     {
         didCustomersWin = true;
     }
-    return 0;
+    return true;
 }
 int Casino::bottlesServed()
 {
-    return 0;
+    return true;
 }
 bool Casino::hostsLiveEvents(int numberOfEvents )
 {
@@ -253,7 +256,7 @@ bool Casino::hostsLiveEvents(int numberOfEvents )
     {
         //shows.showsAreCancelled(); same error in the previous if statemnt
     }
-    return 0;
+    return true;
 }
 //===========================================================
 struct Pastor
@@ -269,6 +272,7 @@ struct Church
     float communityFundBalance = 15496.345f;
     int communityFundProjectsCompleted = 9;
     Pastor participatesInService;
+    int membershipPrice;
    
     struct SundayService
     {
@@ -288,20 +292,20 @@ struct Church
 bool Church::holdServices(bool sundayServiceIsHappening)
 {
     sundayServiceIsHappening = true;
-    return 0;
+    return true;
 }
 int Church::priceOfMembership()
 {
-    if( int priceOfMembership = 1000)
+    if( membershipPrice == 1000)
     {
     pristSalary();
 
     }
-    return 0;
+    return true;
 }
 float Church::pristSalary()
 {
-    return 0;
+    return true;
 }
 //=========================================================
 struct Park
@@ -313,14 +317,15 @@ struct Park
     double donationsPerWeek = 2000.3;
     bool hasSoccerField = true;
     bool childAtDaycare;
+    bool hasACommunityFunction;
 
     bool communityFunction();
-    void reparePark();
+    void repairPark();
     int priceForDaycare();
 };
 bool Park::communityFunction()
 {
-    if( bool communityFunction = true)
+    if( hasSoccerField == true)
     {
         numberOfAttendees = 5000;
     }
@@ -328,22 +333,19 @@ bool Park::communityFunction()
     {
         numberOfAttendees = 250;
     }
-    return 0;
+    return true;
 }
-void Park::reparePark()
+void Park::repairPark()
 {
-    if( bool communityFunction = true)
-    {
-        return;
-    }
+    if( hasACommunityFunction == true){}
 }
 int Park::priceForDaycare()
 {
-    if( int priceForDaycare =! 0)
+    if( int priceForDaycare = 0)
     {
         childAtDaycare = true;
     }
-    return 0;
+    return true;
 }
 //========================================================
 struct Marina
@@ -370,24 +372,21 @@ struct Marina
 };
 bool Marina::storeBoats()
 {
-    if( bool storeBoats =! true)
+    if( hasBoathouse == true)
     {
-        numberOfBoatsStored = 0;
+        numberOfBoatsStored = 15;
     }
-    return 0;
+    return false;
 }
 unsigned int Marina::priceOfStorage()
 {
-    if( unsigned int priceOfStorage =! 0)
+    if( numberOfBoatsStored == 5)
     {
-        return 0;
+        return false;
     }
-    return 0;
+    return false;
 }
-void Marina::priceToCleanYacht(Marina::Yacht  )
-{
-    return;
-}
+void Marina::priceToCleanYacht(Marina::Yacht) {}
 //===========================================================
 struct RoseGarden
 {
@@ -405,19 +404,19 @@ struct RoseGarden
 };
 int RoseGarden::totalFlowersDead()
 {
-    if (bool hasLilacs = false)
+    if (bool hasLilacs = true)
     {
         flowerDeathCount = 26;
     }
-    return 0;
+    return false;
 }
 int RoseGarden::fineAmount()
 {
-    return 0;
+    return false;
 }
 int RoseGarden::numberOfFlowerClasses()
 {
-    return 0;
+    return false;
 }
 //===========================================================
 struct AppleStore
@@ -436,19 +435,19 @@ struct AppleStore
 };
 int AppleStore::newEmployeesHired(int numberOfNewHires)
 {
-    if( numberOfNewHires )
+    if( numberOfNewHires == 1 )
     {
-        return 0;
+        std::cout << "Employee got hired" << std::endl;
     }
-    return 0;
+    return false;
 }
 float AppleStore::itemsRecycled()
 {
-    return 0;
+    return false;
 }
 float AppleStore::priceOfHelpDeskTime()
 {
-    return 0;
+    return false;
 }
 //===========================================================
 struct City
@@ -465,7 +464,7 @@ struct City
     int buildRoads( float moneyInCityBank );
     bool electionYear( bool isAnEvenYear );
 };
-#include <iostream>
+
 int main()
 {
     std::cout << "good to go!" << std::endl;
